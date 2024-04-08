@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  node_docker:
+    container_name: node_docker
+    build: 
+      context: .
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - 5001:5000
+    
+    command:  npm run dev
